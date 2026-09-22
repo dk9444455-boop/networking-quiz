@@ -1,5 +1,5 @@
 // Look at the line below: We will put your Cloudflare Worker address here in Milestone 6
-const API_URL = "YOUR_WORKER_URL_HERE";
+const API_URL = "https://quiz-submit-api.dk9444455.workers.dev";
 
 (function(){
   /* ================= DIAGRAMS (inline SVG) ================= */
@@ -346,7 +346,7 @@ const API_URL = "YOUR_WORKER_URL_HERE";
     const band = pct >= 80 ? 'Excellent work' : pct >= 60 ? 'Good effort' : 'Keep practising';
     const timeSec = Math.round((S.t1 - S.t0) / 1000);
 
-    if(!API_URL || API_URL.includes("YOUR_WORKER_URL_HERE")){
+    if(!API_URL || API_URL.includes("https://quiz-submit-api.dk9444455.workers.dev")){
       S.syncMsg = 'ℹ️ Note: Worker URL not configured yet. Complete Milestone 6 to save to D1.';
       S.syncType = 'wait';
       render();
